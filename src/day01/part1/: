@@ -1,0 +1,14 @@
+import fs from "fs/promises"
+
+
+
+const readAndParse = async (inputFile: string) => {
+  const text =  await fs.readFile(inputFile, "utf-8")
+  
+  const output = text.split('/( |\n)/')
+  console.log(output)
+
+}
+
+
+readAndParse("input.txt")
